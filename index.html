@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lange="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scalee=1.0">
+    <title>Weather App</title>
+    <style>
+        body {font-family: Arial, sans-serif; text-align: center; }
+        #weather { margin-top: 20px;}
+    </style>
+</head>
+<body> 
+    <h1>Weather App</h1>
+    <input type="text" id="city" 
+    placeholder="Uitenhage">
+    <button
+    onclick="getweather()">Getweather</button>
+    <div id="weather"></div>
+    <script>
+async function getweather() {const city =
+    document.getElementById("city"). value;
+    const apikey = 
+    "92454be0c2383e02df549555c4e422b8";
+    const url =
+    'https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}';
+        const response = await fetch(URL);
+        console data = await
+        response.json();
+        document.getElementById("weather").innerHTML=a
+        <h2>${data.name}, ${data.sys.country}</h2>
+        <p>Temperature: ${data.main.temp}C</p>
+        <p>Weather: $ {data.weather[0].description}</p>
+}
+</script>
+</body>
+</html>
